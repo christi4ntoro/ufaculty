@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  margin: 0;
+  background-color: #F6FAFE;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.navbar {
+  width: 240px;
+  background: white;
+  color: #20203A;
+  padding: 0;
+  height: 100vh; /* Ensures it takes the full viewport height */
+  position: fixed; /* Keeps it fixed on the left */
+  top: 0;
+  left: 0;
+}
+
+.navbar .logo {
+  height: 76px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 124px);
+  box-sizing: border-box;
+}
+
+.navbar ul li {
+  width: calc(100% - 40px);
+  height: 52px;
+  margin: 4px 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 12px;
+  color: #9F9FA2;
+}
+
+.navbar ul li:last-of-type {
+  margin-top: auto;
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  color: #20203A;
+  font-weight: 600;
+}
+
+.navbar ul li.selected {
+  background-color: #ECF3FB;
+  color: #20203A;
+  font-weight: 600;
+}
+
+.navbar ul li.not-allowed {
+  cursor: not-allowed !important;
+  color: #9F9FA2 !important;
+  font-weight: inherit;
+}
+
+.navbar ul li i {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  margin-left: 240px; /* Same width as .navbar */
+}
+
+.information {
+  padding: 20px 40px 40px;
+}
+
+.header {
+  height: 76px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: center;
+  background-color: white;
+  padding: 0 40px;
+}
+
+.searchbox {
+  width: calc(100% - 32px);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header input {
+  padding: 12px;
+  width: 100%;
+  border: 1px solid #DBDBDB;
+  border-radius: 8px;
+  color: #9F9FA2;
+}
+
+.searchbox button {
+  position: absolute;
+  top: 4px;
+  right: -16px;
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #9F9FA2;
+  cursor: pointer;
+  transition: all .4s ease-out;
+}
+
+.searchbox button:hover {
+  color: #2100B1;
+  transform: scale(1.1);
+}
+
+.header .userpic {
+  width: 48px;
+  height: 48px;
+  background-color: #2100B1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .4s ease-out;
+  justify-self: end;
+}
+
+.header .userpic:hover {
+  transform: scale(1.04);
+}
+
+.header .userpic span {
+  font-size: 24px;
+  color: #fff;
+}
+
+.user-pic {
+  align-self: flex-end;
+  border-radius: 50%;
+}
+
+/* FCULTY CARDS */
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.section-title button {
+  height: 36px;
+  width: 36px;
+  color: #20203A;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px 0 0;
+  padding: 0;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 0;
+  border: 1px solid #DBDBDB;
+  position: relative;
+  transition: all .4s ease-out;
+  border-radius: 50%;
+}
+
+.section-title button::after {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  font-family: bootstrap-icons; 
+  content: "\F284";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title button:hover {
+  transform: scale(1.08);
+}
+
+.grid-box-2,
+.grid-box-4 {
+  display: grid;
+  gap: 16px;
+}
+
+.grid-box-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-box-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  height: 280px;
+  box-sizing: border-box;
+  padding: 120px 20px 32px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #5046B9;
+  color: white;
+  transition: all .4s ease-out;
+}
+
+.card:nth-of-type(1),
+.card:nth-of-type(4), 
+.card:nth-of-type(7) {
+  background: linear-gradient(210deg, #2100B1 0%, #B749F4 100%);
+}
+.card:nth-of-type(2),
+.card:nth-of-type(5),
+.card:nth-of-type(8) {
+  background: linear-gradient(210deg, #6F4FDE 0%, #82CFFE 100%);
+}
+.card:nth-of-type(3),
+.card:nth-of-type(6),
+.card:nth-of-type(9) {
+  background: linear-gradient(210deg, #650A76 0%, #F162DA 100%);
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card p,
+.course-card p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.card .h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 4px;
+  line-height: 92%;
+}
+
+.card.disabled {
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+/* COURSE CARD */
+.course-card {
+  border: none;
+  box-sizing: border-box;
+  padding: 32px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12);
+  transition: all .4s ease-out;
+}
+
+.course-card:hover {
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+}
+
+.course-card.disabled {
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.course-card p.h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: 0.36px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: #f4f4f4;
+}
+
+table .disabled {
+  cursor: not-allowed;
+  color: gray;
+  opacity: 0.5;
+}
+
+/* Filters */
+.filters {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.filters input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Clickable elements */
+.clickable-topic,
+.clickable-professor {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.clickable-topic:hover,
+.clickable-professor:hover {
+  color: #0056b3;
+}
+
+/* Filtro único */
+.filters {
+  margin: 20px 0;
+}
+
+.filters input {
+  padding: 8px;
+  width: 300px;
+}
+
+/* Detalles (no pop-up) */
+.back-button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para la tabla de estudiantes */
+.student-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: rgba(255,255,255,.6);
+  border: none;
+}
+
+table th, table td {
+  border: none;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background: #E2E1EE;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+table tr {
+  border-bottom: 1px solid #E2E1EE;
+  padding: 16px 0;
+}
+
+table tr td {
+  padding: 20px 12px;
+}
+
+thead th {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+thead th .sort-icon {
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+
+thead th .sort-icon i {
+  font-size: 20px;
+}
+
+.pic-width {
+  width: 60px;
+}
+
+td.actions i {
+  margin: 0 4px
+}
+
+
+
+/* BREADCRUMB */
+.breadcrumb-container {
+  margin: 0 0 12px;
+}
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+}

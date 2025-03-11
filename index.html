@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar" id="navbar">
+            <div class="logo">
+                <img src="assets/ufaculty-logo.svg" alt="">
+            </div>
+            <ul>
+                <li class="home-button selected"><i class="bi bi-columns-gap"></i> Escolas</li>
+                <li class="not-allowed"><i class="bi bi-person-square"></i> Estudantes</li>
+                <li class="not-allowed"><i class="bi bi-person"></i> Professores</li>
+                <li class="last"><i class="bi bi-box-arrow-right"></i> Logout</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header" id="header">
+                <div class="searchbox">
+                    <input type="text" placeholder="Search..." />
+                    <button><i class="bi bi-sliders"></i></button>
+                </div>
+                <div class="userpic">
+                    <span>A</span>
+                </div>
+            </div>
+
+            <div class="information">
+                <!-- Dentro de .main-content -->
+                <div class="breadcrumb-container" id="breadcrumb" style="display: none;"></div>
+                <div class="content">
+                    <!-- Dentro de .main-content -->
+                    <div class="faculties-cards" id="faculties-cards"></div>
+
+                    <div class="faculties-details" id="faculties-details" style="display: none;"></div>
+
+                    <div class="courses" id="courses" style="display: none;"></div>
+
+                    <div class="topic-details" id="topic-details" style="display: none;"></div>
+
+                    <div class="professor-details" id="professor-details" style="display: none;"></div>
+
+                    <div class="student-list" id="student-list" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
