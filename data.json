@@ -85,56 +85,56 @@
     "students": [
         {
             "id": 1,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1001",
             "name": "Alice Green",
             "birthdate": "2002-05-10"
         },
         {
             "id": 2,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1002",
             "name": "Bob Smith",
             "birthdate": "2001-08-15"
         },
         {
             "id": 3,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1003",
             "name": "Charlie Brown",
             "birthdate": "2003-02-20"
         },
         {
             "id": 4,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1004",
             "name": "Diana Prince",
             "birthdate": "2002-11-30"
         },
         {
             "id": 5,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1005",
             "name": "Eva Martinez",
             "birthdate": "2001-07-22"
         },
         {
             "id": 6,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1006",
             "name": "Frank Wilson",
             "birthdate": "2003-04-18"
         },
         {
             "id": 7,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1007",
             "name": "Grace Lee",
             "birthdate": "2002-09-05"
         },
         {
             "id": 8,
-            "photo": "../assets/image-student.png",
+            "photo": "assets/image-student.png",
             "userNumber": "1008",
             "name": "Henry Clark",
             "birthdate": "2001-12-12"
